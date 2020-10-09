@@ -205,3 +205,175 @@ let temPoliticoOnesto = !true;
 console.log ('existe politico onesto no Brasil: ', temPoliticoOnesto );
 
 
+
+//--------------------------------------MINI PROJETOS-------------------MINI PROJETOS--------------------------------------------------------//
+
+//-----MINI-PROJETO 01//
+let a = 'vermelho';
+let b = 'azul';
+
+//console.log (a);
+//console.log (b);
+
+//criamos uma terceira variável para salvar o valor q está em (a).
+let c=a;// agora o valor de (a) ficara armazenado em (c).
+
+a=b; // agora (a) vai receber (b).
+b=c; // e (b) vai receber (c) que possúi o valor de (a).
+
+console.log (a); 
+console.log (b);
+
+//-----CONDICIONAIS--IF-ELSE-----//
+
+let hora = 10;// definimos uma variável e um valor para ela.
+
+/* 
+ Se a hora estiver entre 06:00 e 12:00: escreva 'Bom dia';
+ Se a hora estiver entre 12:00 e 18:00: escreva "Boa noite";
+ Caso contrário se nenhuma das opcões à cima não se aplica escreva: 'Boa noite';
+
+ if (aqui definimos uma condição) {
+aqui entra o código a ser executado!!!
+ }
+
+else if (outra condição) {
+código a ser executado!!!
+}
+
+else {
+código a ser executado!!!
+}
+
+*/
+
+if (hora >6 && hora < 12) {
+console.log ('Bom dia!');
+}
+
+else if (hora > 12 && hora < 18) {
+console.log ('Boa tarde!');
+}
+
+else {
+console.log ('Boa noite!');
+}
+
+
+//---CONDICIONAL----SWITCH-CASE-----//
+let permissao = "comum";//comum, gerente, diretor
+
+switch (permissao) {
+    case "comum":
+        console.log ('Usuário comum');
+    break;
+
+    case "gerente":
+        console.log ("Usuário gerente");
+    break;
+
+    case "diretor":
+        console.log ("Usuário diretor");
+        break;
+
+    default: 
+        console.log ('Usuário não reconhecido');
+}
+
+//LAÇO FOR (LOOP FOR)//
+for (let i=0; i<5; i++) {
+console.log ('Estou aprendendo!',i);// vai imprimir Estou aprendendo! 5 vezes no console do browser.
+}
+
+//imprimindo apenas os números ímpares:
+for (let j=0; j<=5; j++) {
+if (j%2 !==0){
+console.log (j);
+}
+}
+
+//imprimindo números ímpares na decrescente:
+
+for (let k=10; k>=1; k--) {
+if (k%2 !==0) {
+console.log (k);
+}
+}
+
+//imprimindo números pares:
+for (let l=0; l<=10; l++) {
+if (l%2 ==0) {
+console.log (l);
+}
+}
+
+//LOOP--(LAÇO)--WHILE//
+let I=5;
+while(I>=1) {
+if (I % 2 !==0) {
+console.log (I);
+}
+I--;//Repare que o operador de decremento também fica fora do parenteses da condição.
+}
+
+//LAÇO DO...WHILE//
+let A= 0;//em do...while também é necessário declarar uma variável primeiro.
+do {
+console.log ('Digitando!');
+    A++;//Nunca esquecer o operador de incremento ou decremento para não gerar problemas de loops infinitos.
+
+} while (A<10)//O laço while e a condição vem fora de DO.
+
+/* A maior diferença entre WHILE E DO..WHILE é que:
+ 
+ * WHILE: Verifica primeiro e executa depois.
+ 
+ * DO..WHILE: Executa primeiro uma vez e depois verifica.
+ */
+
+let e=0;
+do{
+console.log ('Digitando!',e);//Colocando a variável fará com que o índice também seja exibido.
+    e++;
+} while (e<10)
+
+//LAÇO FOR IN---//
+const pessoa3 = {//OBJETO
+    nomeDePaula: 'Paula',
+    idade: 30
+};
+
+for (let chave in pessoa3) {
+console.log (chave,pessoa3['nomeDePaula']);
+}
+
+
+const cores= ['laranja', 'preto', 'rosa'];//array.
+for (let indice in cores) {
+console.log (indice,cores[indice])
+}
+/*
+const carro = {
+    rodas: 4,
+    portas: 4,
+    cor: 'vermelho',
+    combustivel: 'flex',
+};
+
+for (let explorar in carro) {
+console.log (explorar,carro[combustivel]);
+}
+    */
+
+//-------------------------------------------------TESTE----------------------------------------------------------//
+
+const people= [{idade: 25}, {idade: 12}, {idade: 7}];
+var soma = 0
+for (var i=0; i< people.length; i++) {
+console.log(people[i]);
+ for (var persona in people){
+console.log (persona,people[persona])
+ }
+    soma+= persona
+    console.log (soma)
+}
