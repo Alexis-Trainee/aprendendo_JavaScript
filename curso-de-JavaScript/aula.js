@@ -368,12 +368,10 @@ console.log (explorar,carro[combustivel]);
 //-------------------------------------------------TESTE----------------------------------------------------------//
 
 const people= [{idade: 25}, {idade: 12}, {idade: 7}];
-var soma = 0
-for (var i=0; i< people.length; i++) {
-console.log(people[i]);
- for (var persona in people){
-console.log (persona,people[persona])
- }
-    soma+= persona
-    console.log (soma)
+let valorTotal = 0;
+
+for (persona of people){
+valorTotal +=persona.idade;
 }
+
+ console.log (valorTotal)
