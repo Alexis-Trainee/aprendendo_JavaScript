@@ -450,3 +450,83 @@ if (typeof entrada!=='number')//Faz o teste para ver se não é um número se n�
 	
 }
 
+//Exercitando:::::::::::::::::::::::::::::
+const comparativo1 = fizzBuzz (5);
+console.log (comparativo1);
+
+function fizzBuzz(pc) {
+	if (typeof pc !== 'number')
+		return 'Não é um número';
+
+	if (pc % 2 === 0 && pc % 3 ===0)
+		return 'FizzBuzz';
+
+	if (pc % 2 === 0)
+		return 'Fizz';
+
+	if (pc % 3 ===0)
+		return 'Buzz';
+
+	return pc;
+}
+
+
+//:::::::::::::::::::::::::://
+const caixinha = fizzBuzz(5);
+console.log (caixinha);
+
+function fizzBuzz(caixa){
+
+	if (typeof caixa!=='number')
+		return 'Não é um número';
+
+	if (caixa % 2===0 && caixa % 3===0)
+		return 'FizzBuzz';
+
+	if (caixa % 2===0)
+		return 'Fizz';
+
+	if (caixa % 3 ===0)
+		return 'Buzz';
+
+	return caixa;
+}
+
+const aA = fizzBuzz(5);
+console.log (aA);
+
+function fizzBuzz(bB) {
+	if (typeof bB !== 'number')
+		return 'Não é um número';
+
+	if (bB % 2 ===0 && bB % 3 ===0)
+		return 'FizzBuzz';
+
+	if (bB % 2 ===0)
+		return 'Fizz';
+
+	if (bB % 3 ===0)
+		return 'Buzz';
+	return bB;
+}
+
+const recebe = fizzBuzz ('teste');
+console.log (recebe);
+
+function fizzBuzz (entradaDigital) {
+
+	if (typeof entradaDigital !== 'number')
+		return 'Not a number';
+
+	if (entradaDigital % 2 ===0 && entradaDigital % 3 ===0)
+		return 'FizzBuzz';
+
+	if (entradaDigital % 2 ===0)
+		return 'Fizz';
+
+	if (entradaDigital % 3 ===0)
+		return 'Buzz';
+
+	return entradaDigital;
+}
+
