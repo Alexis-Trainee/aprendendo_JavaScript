@@ -55,13 +55,13 @@ let cidade={};//<---Criado um objeto vazio.
 
 //Ex2:
 let pessoa= {
-    nome: 'Maria',
-    idade: 20,
-    estaAprovado:  true,
-    sobreNome: 'de Sousa',
-    estado: 'Piauí',
-    altura: 1.70,
-    peso: '60KG',
+	nome: 'Maria',
+	idade: 20,
+	estaAprovado:  true,
+	sobreNome: 'de Sousa',
+	estado: 'Piauí',
+	altura: 1.70,
+	peso: '60KG',
 };
 
 console.log (pessoa);
@@ -80,7 +80,7 @@ console.log (casa [2]);
 //FUNCTION:
 let corSite= 'blue';
 function resetaCor(cor){
-corSite = cor;
+	corSite = cor;
 };
 
 console.log (corSite);//Verifica o parametro de corSite
@@ -91,8 +91,8 @@ console.log (corSite);//Para verificar o novo parâmetro
 //-------------------CONCATENANDO---------------------------------------
 let corDoSite = 'green';
 function  resetColor (color, tonalidade){
-corDoSite = color +  tonalidade;//Dar um espaço emtre as strings e o sinal de + para que os nomes não aparecam juntos.
-    // cor +' '+ tonalidade Essa é outra forma de concatenar e a mais recomendada.
+	corDoSite = color +  tonalidade;//Dar um espaço emtre as strings e o sinal de + para que os nomes não aparecam juntos.
+	// cor +' '+ tonalidade Essa é outra forma de concatenar e a mais recomendada.
 };
 
 console.log (corDoSite);
@@ -104,7 +104,7 @@ console.log (corDoSite);
 // Realiza uma tarefa mas não devolve nada.
 
 function dizerNome () {
-console.log ('José');
+	console.log ('José');
 };                              //Apenas realiza a terefa de dizer o nome mas não realiza nada com está função.
 
 dizerNome();
@@ -113,7 +113,7 @@ dizerNome();
 
 
 function multiplicarPorDois(valor) {
-return valor*2;
+	return valor*2;
 
 };
 
@@ -248,15 +248,15 @@ código a ser executado!!!
 */
 
 if (hora >6 && hora < 12) {
-console.log ('Bom dia!');
+	console.log ('Bom dia!');
 }
 
 else if (hora > 12 && hora < 18) {
-console.log ('Boa tarde!');
+	console.log ('Boa tarde!');
 }
 
 else {
-console.log ('Boa noite!');
+	console.log ('Boa noite!');
 }
 
 
@@ -264,93 +264,93 @@ console.log ('Boa noite!');
 let permissao = "comum";//comum, gerente, diretor
 
 switch (permissao) {
-    case "comum":
-        console.log ('Usuário comum');
-    break;
+	case "comum":
+		console.log ('Usuário comum');
+		break;
 
-    case "gerente":
-        console.log ("Usuário gerente");
-    break;
+	case "gerente":
+		console.log ("Usuário gerente");
+		break;
 
-    case "diretor":
-        console.log ("Usuário diretor");
-        break;
+	case "diretor":
+		console.log ("Usuário diretor");
+		break;
 
-    default: 
-        console.log ('Usuário não reconhecido');
+	default: 
+		console.log ('Usuário não reconhecido');
 }
 
 //LAÇO FOR (LOOP FOR)//
 for (let i=0; i<5; i++) {
-console.log ('Estou aprendendo!',i);// vai imprimir Estou aprendendo! 5 vezes no console do browser.
+	console.log ('Estou aprendendo!',i);// vai imprimir Estou aprendendo! 5 vezes no console do browser.
 }
 
 //imprimindo apenas os números ímpares:
 for (let j=0; j<=5; j++) {
-if (j%2 !==0){
-console.log (j);
-}
+	if (j%2 !==0){
+		console.log (j);
+	}
 }
 
 //imprimindo números ímpares na decrescente:
 
 for (let k=10; k>=1; k--) {
-if (k%2 !==0) {
-console.log (k);
-}
+	if (k%2 !==0) {
+		console.log (k);
+	}
 }
 
 //imprimindo números pares:
 for (let l=0; l<=10; l++) {
-if (l%2 ==0) {
-console.log (l);
-}
+	if (l%2 ==0) {
+		console.log (l);
+	}
 }
 
 //LOOP--(LAÇO)--WHILE//
 let I=5;
 while(I>=1) {
-if (I % 2 !==0) {
-console.log (I);
-}
-I--;//Repare que o operador de decremento também fica fora do parenteses da condição.
+	if (I % 2 !==0) {
+		console.log (I);
+	}
+	I--;//Repare que o operador de decremento também fica fora do parenteses da condição.
 }
 
 //LAÇO DO...WHILE//
 let A= 0;//em do...while também é necessário declarar uma variável primeiro.
 do {
-console.log ('Digitando!');
-    A++;//Nunca esquecer o operador de incremento ou decremento para não gerar problemas de loops infinitos.
+	console.log ('Digitando!');
+	A++;//Nunca esquecer o operador de incremento ou decremento para não gerar problemas de loops infinitos.
 
 } while (A<10)//O laço while e a condição vem fora de DO.
 
 /* A maior diferença entre WHILE E DO..WHILE é que:
- 
+
  * WHILE: Verifica primeiro e executa depois.
- 
+
  * DO..WHILE: Executa primeiro uma vez e depois verifica.
  */
 
 let e=0;
 do{
-console.log ('Digitando!',e);//Colocando a variável fará com que o índice também seja exibido.
-    e++;
+	console.log ('Digitando!',e);//Colocando a variável fará com que o índice também seja exibido.
+	e++;
 } while (e<10)
 
 //LAÇO FOR IN---//
 const pessoa3 = {//OBJETO
-    nomeDePaula: 'Paula',
-    idade: 30
+	nomeDePaula: 'Paula',
+	idade: 30
 };
 
 for (let chave in pessoa3) {
-console.log (chave,pessoa3['nomeDePaula']);
+	console.log (chave,pessoa3['nomeDePaula']);
 }
 
 
 const cores= ['laranja', 'preto', 'rosa'];//array.
 for (let indice in cores) {
-console.log (indice,cores[indice])
+	console.log (indice,cores[indice])
 }
 /*
 const carro = {
@@ -363,7 +363,7 @@ const carro = {
 for (let explorar in carro) {
 console.log (explorar,carro[combustivel]);
 }
-    */
+*/
 
 //-------------------------------------------------TESTE----------------------------------------------------------//
 
@@ -371,7 +371,82 @@ const people= [{idade: 25}, {idade: 12}, {idade: 7}];
 let valorTotal = 0;
 
 for (persona of people){
-valorTotal +=persona.idade;
+	valorTotal +=persona.idade;
 }
 
- console.log (valorTotal)
+console.log (valorTotal)
+
+
+//For OF...............................................
+
+for (let mostraCor of cores){
+	console.log (mostraCor)
+}
+
+//.........................................................EXERCÍCIO................................................/////
+//Escreva uma função que usa dois números e retorna o maior entre eles.
+//
+//1- Criar duas variáveis para os dois números.
+//2- Criar uma função que compare os dois números.
+//3- Retornar o mair valor encontrado.
+//
+let number1 = 5;
+let number2 = 10;
+
+if (number1>number2) {
+	console.log ("O maior número é:",number1);
+}
+
+else if(number2>number1) {
+	console.log ("O maior número é:",number2);
+}
+else {
+	console.log ("Os dois números são iguais!!!");
+}
+
+//Resolução do problema utilizando função: (Está resolução foi a realizada no vídeo.)///////
+let maiorValor=max(5,9);
+console.log (maiorValor);
+
+function max(numero1, numero2) {
+	if (numero1>numero2)
+		return numero1;
+	else return numero2;
+}
+
+//Ex2 utilizando operador ternário.
+
+let retornaMaior =max(50,25);
+console.log (retornaMaior);
+function max (numeral1,numeral2) {
+	return numeral1>numeral2 ?numeral1 : numeral2;
+}
+
+//...................................
+let retornarNumero =max(30,40);
+console.log (retornarNumero);
+function max (N1, N2) {
+	return N1 > N2 ?N1 : N2;
+}
+
+const resultado1 = fizzBuzz(true);
+console.log (resultado1);
+
+function fizzBuzz(entrada){
+//código a ser execultado
+if (typeof entrada!=='number')//Faz o teste para ver se não é um número se não for retorna a menssagem não é um número.
+	return 'Não é um número';
+
+	if (entrada % 2 === 0 && entrada % 5 === 0)//Testa para ver se o número é divisível por 2 e por 5 se for retorna FizzBuzz.
+		return 'FizzBuzz';
+
+	if (entrada % 2===0)//Testa para ver se o número é divisível por 2 se for retorna Fizz.
+	return 'Fizz';
+
+	if (entrada % 5===0)//Testa para ver se o número é divisível por 5 se for retorna a menssagem Buzz.
+	return 'Buzz';
+
+	return entrada;//Retorna a entrada se não for uma string e o número não for divisível por 2 nem por 5.
+	
+}
+
