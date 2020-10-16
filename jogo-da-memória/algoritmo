@@ -1,0 +1,27 @@
+Algoritmo:
+definir o projeto.
+criar as pastas para salvar o projeto uma para imagens e outra para os arquivos.
+criar o arquivo inicial HTLM, CSS, JS.
+linkar os arquivos de css, js no html
+salvar imagems na sua respectiva pasta.
+
+Entrada:
+criar a estrutura inicial do jogo que deve conter.
+uma div principal com outras divs menores(chamarei cartas) que serao os cards.
+definir as cores de fundo da div e das cartas.
+colocar as imagems nas cartas estas imagens serão a frente das cartas. 
+cada imagem da frente deve ter outra igual.
+definir e colocar uma imagem para ser o verso de todas as cartas.
+definir o click do mouse como seletor das cartas.
+
+Processamento:
+Tornar cada Carta “clicável”.
+esconder as imagens da frente todas com a imagem de verso.
+Embaralhar as cartas. 
+Tratar para que apenas duas Cartas sejam exibidas após clicadas.
+
+Saída:
+imagem definida como frente ficará visível quando a Carta é clicada.
+mostrar efeito vira carta quando ela é clicada.
+Verificar se as Cartas são iguais, se Sim deixar exibidas, se Não esconder novamente.
+

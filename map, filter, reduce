@@ -123,3 +123,129 @@ const pessoas = [
 }, {maiores:[], menores:[]})
 console.log (pessoasAgrupadas);
 retornará: {maiores: Array(5), menores: Array(3)}
+
+meu exemplo:
+const carros = [
+    {
+        nome: 'Gol',
+        motor: 1.0,
+    },
+    
+    {
+        nome: 'Uno',
+        motor: 1.4,
+    },
+    
+    {
+        nome: 'Cobalt',
+        motor: 1.4,
+    },
+    
+    {
+        nome: 'Celta',
+        motor: 1.0,
+    },
+    
+    {
+        nome: 'Strada',
+        motor: 1.4,
+    },
+    
+    {
+        nome: 'Voyage',
+        motor: 1.0,
+    }
+    ];
+    const grupoDeCarros = carros.reduce(function (valorAcumulador, valorArray) {
+    const propMotorPotencia = valorArray.motor >= 1.4 ? 'maiorPotencia' : 'menorPotencia';
+    
+    valorAcumulador [propMotorPotencia].push(valorArray);
+    
+    return valorAcumulador;
+}, { maiorPotencia: [], menorPotencia: []})
+console.log (grupoDeCarros);
+{maiorPotencia: Array(3), menorPotencia: Array(3)}
+
+
+-------------------------------------------------------início---------------------------------------------------------------------
+O array é números
+const mapEFilter = numeros.filter( numero => numero % 2===0).map(numero=> numero*2);
+undefined
+console.log (mapEFilter);
+VM9608:1 (3) [4, 8, 12]
+
+
+function soma (numero) {
+   return numero + 2;
+}
+undefined
+soma(8);
+10
+const numeros = [1, 2, 3, 4, 5];
+undefined
+numeros
+(5) [1, 2, 3, 4, 5]
+numeros.length;
+5
+numeros.map(function divide (numero)) {
+VM7588:1 Uncaught SyntaxError: Unexpected token ')'
+numeros.map(soma);
+(5) [3, 4, 5, 6, 7]
+numeros.map(function divisao) {
+VM7745:1 Uncaught SyntaxError: Unexpected token ')'
+numeros.map (function (divisao)){
+VM7884:1 Uncaught SyntaxError: Unexpected token ')'
+numeros.push[8];
+undefined
+numeros
+(5) [1, 2, 3, 4, 5]
+numeros.push(6);
+6
+numeros
+(6) [1, 2, 3, 4, 5, 6]
+numeros.map(divide(numero){
+VM8127:1 Uncaught SyntaxError: missing ) after argument list
+numeros.map (function dividir (numero){
+    return numero/2;})
+(6) [0.5, 1, 1.5, 2, 2.5, 3]
+var grupo = [];
+undefined
+numeros.filter (let i =0; i< numeros.length; i++){
+VM8541:1 Uncaught SyntaxError: missing ) after argument list
+for (let i =0; i< numeros.length; i++){
+    numeros[i] % 2===0) {
+VM8646:2 Uncaught SyntaxError: Unexpected token ')'
+for (let i =0; i< numeros.length; i++){
+    if (numeros[i] % 2===0) {
+        grupo.push (numeros[i]);
+    }
+}
+3
+console.log (grupo);
+VM8840:1 (3) [2, 4, 6]
+undefined
+const grupamento = numeros.filter (function multiplos2 (numero) {
+    return numero % 2 === 0})
+undefined
+console.log (grupamento);
+VM9172:1 (3) [2, 4, 6]
+undefined
+const mapEFilter = numeros.filter( numero => numero % 2===0).map(numero=> numero*2);
+undefined
+console.log (mapEFilter);
+VM9608:1 (3) [4, 8, 12]
+--------------------------------------------------------------fim------------------------------------------------------------------
+PAR ÍMPAR
+const numeros = [1, 2, 3, 4, 5];
+undefined
+const parImpar = numeros.reduce (function (valorAcumulador, valorArray) {
+    var conjuntoParImpar = valorArray % 2 ===0 ? 'pares' : 'impares';
+    valorAcumulador[conjuntoParImpar].push (valorArray);
+    return valorAcumulador;
+},{pares:[], impares: []})
+undefined
+console.log (parImpar);
+VM10450:1 {pares: Array(2), impares: Array(3)}
+
+-----------------------------------------------FUNCTION-------------------------------------------------------------------------
+
