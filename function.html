@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang 'en'>
+  <head>
+    <title>FUNCTIONS</title>
+    <meta charset= 'UTF-8'>
+  </head>
+  <body>
+    <p>FUNCTIONS
+
+      <script>
+
+        function escreva() {
+          console.log ("Olá Mundo!");
+        }
+        escreva();
+        escreva();
+        escreva();
+        console.log ('teste');
+        escreva ();
+        escreva();
+        escreva();
+
+        function escrevaMensagem (mensagem) {
+          console.log(mensagem);
+        }
+
+        escrevaMensagem('Brasil');
+        escrevaMensagem('Casa');
+        escrevaMensagem('País');
+
+        function soma (a,b){
+          return a+b;
+        }
+
+        var somaDeAeB = soma (10, 5);
+        console.log (somaDeAeB);
+        //IMPRIMINDO DIRETO SEM CRIAR VARIÀVEL
+        console.log(soma(10,10));
+
+        // somando os numeros de um array com functions
+        function somaTudo(numeros) {
+          var total = 0;
+
+          for (var num of numeros) {
+            total = total+ num;
+          }
+          return total;
+        }
+        var resultado = somaTudo ([3, 5, 7, 10, 9, 12]);
+        console.log(resultado);
+
+        //Reforçando
+        //Criar uma função de soma para somar os valores de um array.
+        function somatorio(numeros) {
+          var armazenadora =0;
+          for (var num of numeros){
+            armazenadora = armazenadora + num;
+          }
+          return armazenadora;
+        }
+        var impressora = somatorio ([ 10, 20, 5, 15, 50]);
+        console.log (impressora);
+
+        //EX2:
+
+        function somaNumeros (numeros) {
+          var armazenaDados = 0;
+          for (pegaDadosDeNumeros of numeros) {
+            armazenaDados = armazenaDados + pegaDadosDeNumeros;
+          }
+          return armazenaDados;
+        }
+        var imprimeNoConsole = somaNumeros ([1, 2, 3, 4,]);
+        console.log('A function somaNumeros é igual a:',imprimeNoConsole);
+
+        //Function com rest(...) serve quando não se sabe quantos parâmetros terá a function.
+
+        function endereco(rua, cidade, pais, ...complementos){
+          console.log (rua);
+          console.log (cidade);
+          console.log (pais);
+
+          console.log (complementos);
+        }
+
+        endereco('rua dos bobos', 'Teresina', 'Brasil', 'x', 'v', 'b', 'w', 't', 'e' );
+
+        //Função auto executável 
+
+        (function autoExecuta () {
+console.log('Executei');
+        }());
+
+        (function autoExecutavel (nome) {
+console.log ('executei',nome);
+        }('Alexis'));
+
+(function executeNome (nome) {
+
+console.log ("O nome é", nome);
+}("Maria"));
+
+        //Função anônima
+        var subtraiTreNumeros = function (a, b, c) {
+return a-b-c;
+        };
+console.log (subtraiTreNumeros (15, 3, 6));
+
+        //ex2
+        var subtraiQuatroNumeros = function (a, b, c, d) {
+return a-b-c-d;
+        };
+        console.log (subtraiQuatroNumeros (100, 50, 25, 25));
+         
+
+        //ex 3
+
+        somaCincoNumeros = function (a, b, c, d, e) {
+return a+b+c+d+e;
+        };
+        console.log (somaCincoNumeros(5, 5, 5, 5, 5));
+
+        //Função de callback
+        function somadora (a, b, funcao) {
+return funcao (a+b);
+        }
+
+        var multiplica = function (total) {
+total = total*2;
+        }
+        console.log ((10, 5, multiplica));
+      </script>
+  </body>
+</html>
+

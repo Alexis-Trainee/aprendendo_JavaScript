@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang= 'en'>
+  <head>
+    <meta charset = 'UTF-8'>
+    <title>
+      Tutorial YouTube
+      </title>
+    </head>
+    <body>
+      <p> Loops and functions
+        
+
+        <script>
+          for (let contador=0; contador < 10; contador ++ ) {
+console.log (contador);
+          }
+var numerosAleatorios = [3, 5, 10, 2, 19, 21, 13];
+          for (var contador=0; contador < numerosAleatorios.length; contador++) {
+console.log (numerosAleatorios[contador]);
+          }
+
+          var pessoas =  ['Ana', 'Maria', 'João', 'Marcos', 'Paula', 'Marcia', 'Roberto', 'Raimundo', 'Yara',];
+          for (var contaPessoas =0; contaPessoas < pessoas.length; contaPessoas++ ) {
+console.log (pessoas[contaPessoas]);
+          }
+
+ var pessoa1 =  ['Ana', 'Maria', 'João', 'Marcos', 'Paula', 'Marcia', 'Roberto', 'Raimundo', 'Yara',];
+          for (var contaPessoas =0; contaPessoas < pessoa1.length; contaPessoas++ ) {
+            console.log (`${contaPessoas}-${pessoa1[contaPessoas]}`);
+          }
+          for(var i =pessoa1.length -1; i>0; i--) {
+            console.log (`Posição ${i} com decremento: ${pessoa1[i]}`);
+          }
+
+          for (var i =0; i < 10; i++) {
+            if (i===5) {
+break;
+            }
+            console.log (`utilizando break ${i}`)
+          }
+
+          for (var i = 0; i<50; i++) {
+            if (i % 2 ===0) {
+continue;//retorna o loop caso ele seja chamado neste exemplo se o numero /2 for resto zero ou seja par ele retorna ao loop do contrário imprime na tela.
+            }
+            console.log (`utilizando continue`,i);
+          }
+
+          //for of
+var numerosAleatorios = [3, 5, 10, 2, 19, 21, 13];
+          for (var num of numerosAleatorios) {
+console.log('for of', num);
+          }
+
+
+var x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+          for (var numerosDeX of x) {
+console.log('for of de x', numerosDeX);
+          }
+
+          //Imprimindo PInPong
+          for (i=0; i<= 100; i++) {
+            if (i % 3 === 0 && i % 5 ===0) {
+console.log (i,'PING PONG');
+            }else if (i % 3 ===0) {
+console.log (i,'Ping');
+            }else  if (i % 5 ===0) {
+console.log (i,'Pong');
+            }
+          }
+          </script>
+      </body>
+  </html>
+
