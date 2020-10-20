@@ -1,0 +1,30 @@
+
+
+        //Problematização: Criar uma função callback que tenha outra função como parâmetro e que seja executada dentro dela.
+
+        function multiplicacao (a, b, funcaoCallback) {
+          return funcaoCallback (a*b);
+        }
+
+        var resultado = function (acumulador) {
+          return acumulador/5; 
+      //Acumulador apenas guardará uma informação.
+        };
+
+        console.log (multiplicacao(5, 5, resultado));
+        
+        //DESCRIÇÂO:
+      /*
+      	1° criou-se uma função nomeada MULTIPLICACAO e definimos três parâmetros para ela são eles a, b e funcaoCallback.
+        2° pedimos a function que retornase o valor funcaoCallback(a*b);
+
+        3° criou-se uma variavel chamada resultado e nela definimos uma função com um parâmetro chamado ACUMULADOR.
+        4° pedimos para que a variável resultado retorne o valor de acumulador/5;
+        5° ACUMULADOR apenas guarda uma informação nada mais.
+        6° Chamamos a 1° função que é multiplicacao e passamos os valores dos parâmetros de a e b (5, 5) depois chamamos a variável 		resultado
+        que contém a função acumulador armazenada nela.
+        7° a função multiplicacao retornará a operação 5*5 que é igual a 25, 25 será salvo em acumulador que por sua vez dividirá o 		resultado de        5*5 por 5 e retornará o resultado que é 5.
+
+DÚVIDA=> *OBS:  Pergunta como acumulador sabe que deve guardar o valor da multiplicação da função acima???
+        */
+

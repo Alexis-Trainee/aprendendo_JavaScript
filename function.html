@@ -88,47 +88,114 @@
         //Função auto executável 
 
         (function autoExecuta () {
-console.log('Executei');
+          console.log('Executei');
         }());
 
         (function autoExecutavel (nome) {
-console.log ('executei',nome);
+          console.log ('executei',nome);
         }('Alexis'));
 
-(function executeNome (nome) {
+        (function executeNome (nome) {
 
-console.log ("O nome é", nome);
-}("Maria"));
+          console.log ("O nome é", nome);
+        }("Maria"));
 
         //Função anônima
         var subtraiTreNumeros = function (a, b, c) {
-return a-b-c;
+          return a-b-c;
         };
-console.log (subtraiTreNumeros (15, 3, 6));
+        console.log (subtraiTreNumeros (15, 3, 6));
 
         //ex2
         var subtraiQuatroNumeros = function (a, b, c, d) {
-return a-b-c-d;
+          return a-b-c-d;
         };
         console.log (subtraiQuatroNumeros (100, 50, 25, 25));
-         
+
 
         //ex 3
 
         somaCincoNumeros = function (a, b, c, d, e) {
-return a+b+c+d+e;
+          return a+b+c+d+e;
         };
         console.log (somaCincoNumeros(5, 5, 5, 5, 5));
 
         //Função de callback
         function somadora (a, b, funcao) {
-return funcao (a+b);
+          return funcao (a+b);
         }
 
         var multiplica = function (total) {
-total = total*2;
+          return  total*2;
+        };
+
+        console.log (somadora(10, 5, multiplica));
+
+        //Criar uma função callback que tenha outra função como parâmetro e que seja executada dentro dela.
+
+        function multiplicacao (a, b, funcaoCallback) {
+          return funcaoCallback (a*b);
         }
-        console.log ((10, 5, multiplica));
+
+        var resultado = function (acumulador) {
+          return acumulador/5; 
+          //Acumulador apenas guardará uma informação.
+        };
+
+        console.log (multiplicacao(5, 5, resultado));
+
+        //DESCRIÇÂO:
+        /*1° criou-se uma função nomeada MULTIPLICACAO e definimos três parâmetros para ela são eles a, b e funcaoCallback.
+        2° pedimos a function que retornase o valor funcaoCallback(a*b);
+
+        3° criou-se uma variavel chamada resultado e nela definimos uma função com um parâmetro chamado ACUMULADOR.
+        4° pedimos para que a variável resultado retorne o valor de acumulador/5;
+        5° ACUMULADOR apenas guarda uma informação nada mais.
+        6° Chamamos a 1° função que é multiplicacao e passamos os valores dos parâmetros de a e b (5, 5) depois chamamos a variável resultado
+        que contém a função acumulador armazenada nela.
+        7° a função multiplicacao retornará a operação 5*5 que é igual a 25, 25 será salvo em acumulador que por sua vez dividirá o resultado de        5*5 por 5 e retornará o resultado que é 5.
+
+         *OBS:  Pergunta como acumulador sabe que deve guardar o valor da multiplicação da função acima???
+         */
+        //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
+
+        function divisora (a, b, c) {
+          return c(a/b);
+        };
+
+        var guardaFuncao = function (total) {
+          return total*2;
+        };
+        var guardaFuncao2 = function (valor) {
+          return valor+10;
+        };
+
+        console.log (divisora (10, 5, guardaFuncao2));
+        //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
+
+        function calcula (a, b, c) {
+          return c(a+b);
+        };
+
+        var soma = function (fazSoma) {
+          return fazSoma + 100;
+        };
+
+        var subtrai = function (fazSubtracao) {
+          return fazSubtracao - 10;
+        };
+
+        console.log (calcula (50, 50, soma));
+        console.log (calcula (50, 50, subtrai));
+
+        //Definindo um valor padrão.
+
+        function pessoa (nome = 'Alexis', idade = 32) {
+          console.log (nome);
+          console.log (idade);
+        };
+        pessoa ();//Não declarando nenum valor de parÂmetro ele chama os valores padrão pré definidos no ex: 'Alexis',32.
+        pessoa('Maria', 20);//Já aqui os valores estão declarados 'Maria', 20 retornando os mesmos.
       </script>
   </body>
 </html>

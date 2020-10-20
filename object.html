@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>OBJETOS EM JS</title>
+    <meta charset='UTF-8'>
+  </head>
+
+  <body>
+    <p>Estudo de objetos
+
+      <script>
+        //Getters e setters
+
+        var usuarios = [
+          {
+            nome: "Ayrton",
+            Idade: 26,
+          },
+          {
+            nome: "João",
+            idade: 19,
+          },
+
+          {
+            nome: "Maria",
+            idade: 21,
+          }
+
+        ];
+        var usuario = {
+          posicao: 0,
+        get atual () {
+return usuarios [this.posicao]
+          },
+          set atual (posicao) {
+this.posicao = posicao;
+          },
+
+          proximo() {
+++this.posicao;
+          },
+
+          anterior() {
+--this.posicao;
+          }
+        };
+
+        console.log (usuarios);
+        console.log(usuarios[1]);
+        console.log (usuarios[1].nome);
+        console.log (usuarios[1].idade);
+
+        console.log (usuario.atual); //{nome: "Ayrton", idade: 26}
+        usuario.proximo();
+
+        console.log (usuario.atual); //{nome: "João", idade: 19}
+        usuario.proximo();
+
+        console.log (usuario.atual); //{nome: "Maria", idade: 21}
+
+        usuario.anterior();
+        console.log (usuario.atual);// console.log (usuario.atual); //{nome: "João", idade: 19}
+
+        usuario.atual = 0;
+        console.log (usuario.atual); //{nome: "Ayrton", idade: 26}
+
+        usuario.atual = 2;
+        console.log (usuario.atual); //{nome: "Maria", idade: 21}
+
+
+      </script>
+  </body>
+</html>
