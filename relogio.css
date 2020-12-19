@@ -1,0 +1,15 @@
+body {
+    background-color: black;
+}
+#relogio  {
+    background-color: black;
+    color: red;
+    display: block;
+    width: 220px;
+    height: 60px;
+    text-align: center;
+    margin: auto;
+    margin-top: 20%;
+    font-size: 50px;
+    border-radius: 10px;
+}
